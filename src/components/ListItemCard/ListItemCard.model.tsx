@@ -6,9 +6,11 @@ export interface ListItemCardViewModel {
   price: number;
   image: ImageSourcePropType;
   actionIcon: string;
+  handleCardPress: () => void;
 }
 
 export interface ListItemCardProps {
+  id: string;
   title: string;
   description: string;
   price: number;

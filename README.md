@@ -40,7 +40,7 @@ However the responsibilities were very well separated.
 ## Thought Process
 Example:  
 1. I designed the screens I wanted to make in Figma.
-2. I implemented the routes with navigators.
+2. I implemented the routes with navigators including the types for stacks.
 3. I added animation to the drawer screen.
 4. I added animation to the bottom tab.
 5. I ran it on both devices (Android and iOS) to check that everything was working correctly.

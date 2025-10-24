@@ -3,6 +3,7 @@ import { ListItemCardView } from "./ListItemCard.view";
 import { useListItemCardViewModel } from "./ListItemCard.viewmodel";
 
 function ListItemCard({
+  id,
   title,
   description,
   price,
@@ -10,6 +11,7 @@ function ListItemCard({
   actionIcon
 }: ListItemCardProps) {
   const props = useListItemCardViewModel({
+    id,
     title,
     description,
     price,

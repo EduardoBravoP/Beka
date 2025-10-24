@@ -3,9 +3,9 @@ import { ListItemCardViewModel } from "./ListItemCard.model";
 import Icon from "react-native-vector-icons/Feather";
 import { styles } from "./styles";
 
-function ListItemCardView({ title, description, price, image, actionIcon }: ListItemCardViewModel) {
+function ListItemCardView({ title, description, price, image, actionIcon, handleCardPress }: ListItemCardViewModel) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={handleCardPress}>
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={image} />
       </View>
@@ -21,7 +21,7 @@ function ListItemCardView({ title, description, price, image, actionIcon }: List
           <Icon name={actionIcon} size={24} color="#fff" />
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 

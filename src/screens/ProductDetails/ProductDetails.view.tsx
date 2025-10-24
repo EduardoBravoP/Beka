@@ -7,10 +7,8 @@ import { ProductDetailsViewModel } from "./ProductDetails.model";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 function ProductDetailsView({
-  title,
-  description,
-  price,
-  image
+  product,
+  handleGoBack
 }: ProductDetailsViewModel) {
   return (
     <SafeAreaView>
@@ -18,16 +16,14 @@ function ProductDetailsView({
         <Header
           title="Product Details"
           leftIcon="arrow-left"
-          onLeftIconPress={() => {}}
+          onLeftIconPress={handleGoBack}
         />
 
         <View style={styles.contentContainer}>
-          <Image source={image} style={styles.image} />
+          <Image source={product.image} style={styles.image} />
 
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.description}>{description}</Text>
-          <Text style={styles.price}>
-            {price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+          <Text style={styles.title}>{product.title}</Text>
+          <Text style={styles.description}>{product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
           </Text>
 
           <View style={styles.actions}>

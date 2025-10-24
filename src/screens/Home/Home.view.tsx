@@ -23,6 +23,7 @@ function HomeView({ products, navigation, insets }: HomeViewModel) {
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <ListItemCard
+                id={item.id}
                 title={item.title}
                 description={item.description}
                 price={item.price}
