@@ -10,7 +10,7 @@ function App() {
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor="#F8F8F8" />
       <NavigationContainer>
         <DrawerNavigator />
       </NavigationContainer>

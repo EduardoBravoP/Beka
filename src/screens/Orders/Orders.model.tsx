@@ -12,4 +12,5 @@ export type NavigationProp = DrawerNavigationProp<DrawerParamList, 'Main'>;
 export interface OrdersViewModel {
   orders: OrderItem[];
   navigation: NavigationProp;
+  insets: { top: number; bottom: number; left: number; right: number };
 }

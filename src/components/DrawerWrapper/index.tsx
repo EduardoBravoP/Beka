@@ -2,10 +2,10 @@
 import { useDrawerProgress } from "@react-navigation/drawer";
 import { ReactNode } from "react";
 import Animated, { Extrapolation, interpolate, useAnimatedStyle } from "react-native-reanimated";
-import { Dimensions, Platform } from "react-native";
+import { Dimensions } from "react-native";
 
 const { width} = Dimensions.get('window');
-export const drawerTranslateX = Platform.OS === 'android' ? width * 0.4 + 100 : 100;
+export const drawerTranslateX = width * 0.4 + 100;
 
 function DrawerWrapper({ children }: { children: ReactNode }) {
   const progress = useDrawerProgress();

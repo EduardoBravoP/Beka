@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeStackNavigator from "./HomeStackNavigator";
 import { Cart } from "../screens/Cart";

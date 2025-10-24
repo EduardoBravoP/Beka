@@ -2,6 +2,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import BottomTabNavigator from "./BottomTabNavigator";
 import { Orders } from "../screens/Orders";
 import { DrawerParamList } from "../@types/navigation";
+import { CustomDrawer } from "../components/Drawer";
 
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
@@ -24,15 +25,22 @@ export default function DrawerNavigator() {
         drawerLabelStyle: {
           fontSize: 20,
         },
-        drawerHideStatusBarOnOpen: true,
         sceneStyle: {
           backgroundColor: '#161631',
         },
         overlayColor: 'transparent',
         drawerStatusBarAnimation: 'slide',
+        drawerContentStyle: {
+           backgroundColor: '#161631'
+        },
+        drawerContentContainerStyle: {
+          backgroundColor: '#161631'
+        },
+        drawerType: 'front',
       }}
+      drawerContent={CustomDrawer}
     >
-      <Drawer.Screen name="Main" component={BottomTabNavigator} options={{ title: "Home" }} />
+      <Drawer.Screen name="Main" component={BottomTabNavigator} />
       <Drawer.Screen name="Orders" component={Orders} />
     </Drawer.Navigator>
   );

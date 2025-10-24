@@ -10,7 +10,7 @@ const deg = 10;
 const theta = (Math.PI / 180) * deg;
 
 const offsetX = (H / 2) * Math.sin(theta) + (W / 2) * (1 - Math.cos(theta));
-const bottomSheetTranslateX = Platform.OS === 'android' ? drawerTranslateX - 13 + offsetX : drawerTranslateX - 16 + offsetX;
+const bottomSheetTranslateX = Platform.OS === 'android' ? drawerTranslateX - 18 + offsetX : drawerTranslateX - 16 + offsetX;
 
 function BottomTabWrapper({ children }: { children: ReactNode }) {
   const progress = useDrawerProgress();

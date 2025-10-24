@@ -2,9 +2,11 @@ import { NavigationProp, OrderItem, OrdersViewModel } from "./Orders.model";
 import MacbookImg from "../../../assets/images/Macbook.png";
 import BudsImg from "../../../assets/images/Earbuds.png";
 import { useNavigation } from "@react-navigation/native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 function useOrdersViewModel(): OrdersViewModel {
   const navigation = useNavigation<NavigationProp>();
+  const insets = useSafeAreaInsets();
 
   const mockProducts: OrderItem[] = [
     {
@@ -29,7 +31,8 @@ function useOrdersViewModel(): OrdersViewModel {
   
   return {
     orders: mockProducts,
-    navigation
+    navigation,
+    insets
   };
 }
 
