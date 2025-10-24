@@ -2,10 +2,12 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { ProductDetailsViewModel } from "./ProductDetails.model";
 import { mockProducts } from "../../utils/mockProducts";
 import { Product } from "../../types/Product";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 function useProductDetailsViewModel(): ProductDetailsViewModel {
   const route = useRoute();
   const navigation = useNavigation();
+  const insets = useSafeAreaInsets();
 
   const handleGoBack = () => {
     navigation.goBack();
@@ -16,7 +18,8 @@ function useProductDetailsViewModel(): ProductDetailsViewModel {
 
   return {
     product,
-    handleGoBack
+    handleGoBack,
+    insets
   }
 }
 

@@ -4,6 +4,7 @@ import { Product } from "../../types/Product";
 export interface ProductDetailsViewModel {
   product: Product;
   handleGoBack: () => void;
+  insets: { top: number; bottom: number; left: number; right: number };
 }
 
 export interface ProductDetailsProps {

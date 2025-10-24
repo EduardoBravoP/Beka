@@ -12,7 +12,8 @@ export default function HomeStackNavigator() {
         headerShown: false,
         cardStyle: {
           backgroundColor: '#161631'
-        }
+        },
+        animation: "none"
       }}
     >
       <Stack.Screen name="HomeScreen" component={Home} />
