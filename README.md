@@ -16,6 +16,10 @@
 I have built the entire app with React Native with React Navigation for the routes.
 For the screen animations I used react-native-reanimated
 
+https://github.com/user-attachments/assets/593c40c7-744c-489a-9752-b7aeba839f11
+
+
+
 [ANDROID.webm](https://github.com/user-attachments/assets/5cdccf9b-1c86-4784-92bc-1f47342bd273)
 
 ---
